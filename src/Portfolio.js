@@ -1,5 +1,11 @@
+//src/Portfolio.js
 import React, { useState, useEffect } from "react";
 import Navbar from './components/Navbar';
+import HeroSection from "./components/sections/HeroSection";
+import projects from "./data/projects.json";
+import ProjectSection from "./components/sections/ProjectSection";
+import PixelCard from "./components/ui/PixelCard";
+
 import { motion } from "framer-motion";
 import {
   Github,
@@ -235,70 +241,7 @@ const Portfolio = () => {
         </div>
       </nav>
 
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          {/* Animated background */}
-          <motion.div
-            className="absolute inset-0 opacity-30 -z-10"
-            animate={{
-              background: [
-                "radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%)",
-                "radial-gradient(circle at 80% 50%, rgba(100, 116, 139, 0.1) 0%, transparent 50%)",
-                "radial-gradient(circle at 50% 80%, rgba(234, 179, 8, 0.1) 0%, transparent 50%)",
-              ],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          />
-
-          <div className="max-w-7xl mx-auto relative z-10 text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl sm:text-6xl font-bold mb-6 tracking-tight text-slate-800 dark:text-slate-100"
-            >
-              Shubha Shree S V
-            </motion.h1>
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              KEC CSE'27 · Web Developer · Aspiring Data Scientist
-            </p>
-
-            {/* Social links */}
-            <div className="flex justify-center space-x-4 mb-10">
-              <motion.a
-                href="https://www.linkedin.com/in/shubha-shree-sv/"
-                whileHover={{ scale: 1.1 }}
-                className="p-2 bg-slate-800 text-white rounded-full hover:bg-slate-700 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://github.com/shubhashreesv"
-                whileHover={{ scale: 1.1 }}
-                className="p-2 bg-zinc-800 text-white rounded-full hover:bg-zinc-700 transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://leetcode.com/u/shubha_shree/"
-                whileHover={{ scale: 1.1 }}
-                className="p-2 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors"
-              >
-                <Code className="w-5 h-5" />
-              </motion.a>
-            </div>
-
-            {/* Resume button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-full font-medium hover:shadow-lg transition-all"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download Resume
-            </motion.button>
-          </div>
-        </section>
+        <HeroSection/>
 
         {/* About Me Section */}
         <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -419,64 +362,8 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section
-          id="projects"
-          className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-50 dark:bg-neutral-900"
-        >
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-5xl font-bold text-center mb-16 text-amber-600 dark:text-amber-400 text-shadow-animated"
-            >
-              Projects
-            </motion.h2>
-
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {projects.map((project, index) => (
-                <motion.div
-                  key={project.name}
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
-                  className="bg-white dark:bg-neutral-800 rounded-xl p-6 border border-neutral-200 dark:border-neutral-700 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <h3 className="text-xl font-semibold mb-3 text-neutral-800 dark:text-neutral-100">
-                    {project.name}
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-300 mb-4 text-sm">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-full text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center text-amber-600 dark:text-amber-400 hover:underline text-sm"
-                  >
-                    <Github className="w-4 h-4 mr-1" />
-                    View Code
-                  </a>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+        <section className="py-12 px-6">
+          <ProjectSection projects={projects} />
         </section>
 
         {/* Certifications Section */}

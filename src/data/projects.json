@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Freelancing Platform",
+    "description": "SIH'24 project connecting freelancers with clients, featuring real-time chat and project management.",
+    "tech": ["React", "MongoDB", "Python", "Express"],
+    "github": "#",
+    "prototype": "https://prototype-link.com/freelance",
+    "image": "/images/freelancing-platform.png"
+  },
+  {
+    "name": "Grammar Checker Extension",
+    "description": "Chrome extension that helps users improve their writing with real-time grammar suggestions.",
+    "tech": ["JavaScript", "Chrome APIs", "HTML/CSS"],
+    "github": "#",
+    "prototype": "https://prototype-link.com/grammar",
+    "image": "/images/grammar-extension.png"
+  },
+  {
+    "name": "Admin-User Task System",
+    "description": "Full-stack application for task management with role-based access control.",
+    "tech": ["Django", "MySQL", "Bootstrap"],
+    "github": "#",
+    "prototype": "https://prototype-link.com/task-system",
+    "image": "/images/task-system.png"
+  },
+  {
+    "name": "Event Management Portal",
+    "description": "MERN stack application for organizing and managing events with user registration.",
+    "tech": ["MongoDB", "Express", "React", "Node.js"],
+    "github": "#",
+    "prototype": "https://prototype-link.com/event-portal",
+    "image": "/images/event-portal.png"
+  },
+  {
+    "name": "UI Design Projects",
+    "description": "Collection of UI/UX designs including Community Report, GoBus, and BookBay prototypes.",
+    "tech": ["Figma", "UI/UX", "Design"],
+    "github": "#",
+    "prototype": "https://prototype-link.com/ui-designs",
+    "image": "/images/ui-designs.png"
+  }
+]
