@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import projects from "../../data/projects.json";
 import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
+import Particles from "../ui/Particles";
 
 const ProjectsSection = () => {
   const containerVariants = {
@@ -42,9 +43,13 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-900">
-      <div className="max-w-7xl mx-auto">
-        <motion.h2
+  <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-neutral-900/90 overflow-hidden">
+    {/* Particles Background (fixed, behind all content) */}
+    <div className="fixed inset-0 z-0 pointer-events-none">
+      <Particles particleCount={350} particleColors={["#00ffff", "#00ffea", "#0055ff"]} speed={0.12} particleSpread={16} particleBaseSize={180} alphaParticles={true} className="w-full h-full" />
+    </div>
+    <div className="max-w-7xl mx-auto relative z-10">
+  <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -68,38 +73,17 @@ const ProjectsSection = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative bg-neutral-800 border border-neutral-700 rounded-xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10"
+              className="group relative bg-neutral-800/80 border border-neutral-700 rounded-xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 backdrop-blur"
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-neutral-700 to-neutral-800 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                     style={{
-                       background: `linear-gradient(135deg, ${getCategoryColor(project.category).split(' ')[1]} 0%, ${getCategoryColor(project.category).split(' ')[3]} 100%)`
-                     }}>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white/80 text-6xl font-bold">
-                    {project.name.charAt(0)}
-                  </div>
-                </div>
-                
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getCategoryColor(project.category)} text-white`}>
-                    {project.category}
-                  </span>
-                </div>
-
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getStatusColor(project.status)}`}>
-                    {project.status}
-                  </span>
-                </div>
+              {/* Category Badge */}
+              <div className="absolute top-4 left-4 z-10">
+                <span className={`px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getCategoryColor(project.category)} text-white`}>
+                  {project.category}
+                </span>
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 pt-10">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {project.name}
                 </h3>
@@ -165,7 +149,7 @@ const ProjectsSection = () => {
           ))}
         </motion.div>
 
-        {/* View All Projects Button */}
+        {/* View More Projects Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -173,17 +157,18 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all"
+          <a
+            href="https://github.com/shubhashreesv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg"
           >
             <Github className="w-5 h-5 mr-2" />
-            View All on GitHub
-          </motion.button>
+            View More Projects
+          </a>
         </motion.div>
-      </div>
-    </section>
+  </div>
+  </section>
   );
 };
 

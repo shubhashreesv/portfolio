@@ -5,8 +5,9 @@ import LetterGlitch from "../ui/LetterGlitch"; // ✅ import the glitch bg
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="about" className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Glitch Background */}
+     
       <div className="absolute inset-0 z-0">
         <LetterGlitch glitchSpeed={60} smooth outerVignette />
       </div>
@@ -95,17 +96,36 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Resume Button */}
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(6, 182, 212, 0.3)" }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg"
-        >
-          <Download className="w-5 h-5 mr-2" />
-          Download Resume
-        </motion.button>
+        <div>
+  <a
+    href="/RESUME.pdf"  // <-- File in public folder
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => {
+      if (window.gtag) {
+        window.gtag('event', 'download_resume', {
+          event_category: 'Resume',
+          event_label: 'User downloaded resume',
+        });
+      }
+    }}
+  >
+    <motion.button
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 1.0 }}
+      whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(6, 182, 212, 0.3)" }}
+      whileTap={{ scale: 0.95 }}
+      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg"
+    >
+      <Download className="w-5 h-5 mr-2" />
+      Download Resume
+    </motion.button>
+  </a>
+</div>
+
+
       </div>
     </section>
   );

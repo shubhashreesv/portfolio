@@ -2,8 +2,7 @@ const skillsData = {
   "Problem Solving": [
     "LeetCode (300+ problems)",
     "Data Structures & Algorithms", 
-    "Competitive Programming",
-    "System Design"
+    "Competitive Programming"
   ],
   "Web Technologies": [
     "React.js",
@@ -22,14 +21,13 @@ const skillsData = {
   "Databases": [
     "MongoDB",
     "MySQL",
-    "Database Design",
-    "Query Optimization"
+    "Database Design"
   ],
   "DevOps & Cloud": [
     "Git/GitHub",
     "Basic CI/CD",
     "Docker (Basics)",
-    "AWS Cloud"
+    "AWS Cloud Basics"
   ],
   "Design & Tools": [
     "Bootstrap",

@@ -12,10 +12,11 @@ import {
 const navItems = [
   { icon: <VscAccount size={18} />, label: 'About', href: '#about' },
   { icon: <VscProject size={18} />, label: 'Skills', href: '#skills' },
+    { icon: <VscBriefcase size={18} />, label: 'Experience', href: '#experience' },
+
   { icon: <VscArchive size={18} />, label: 'Projects', href: '#projects' },
-  { icon: <VscVerified size={18} />, label: 'Achievements', href: '#achievements' },
-  { icon: <VscSettingsGear size={18} />, label: 'Certifications', href: '#certifications' },
-  { icon: <VscBriefcase size={18} />, label: 'Experience', href: '#experience' },
+    { icon: <VscVerified size={18} />, label: 'Achievements', href: '#achievements' },
+
   { icon: <VscMail size={18} />, label: 'Contact', href: '#contact' },
 ];
 

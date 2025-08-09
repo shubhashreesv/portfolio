@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import Particles from "../ui/Particles";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -10,14 +11,14 @@ const ExperienceSection = () => {
       location: "Remote",
       description: "Working on cutting-edge AI projects and gaining hands-on experience with generative AI technologies.",
       type: "internship",
-      current: true
+      current: false
     },
     {
       role: "Treasurer",
       company: "CSE Coding Club",
       period: "2025 – Present",
       location: "KEC",
-      description: "Leading coding activities and mentoring junior students in programming while managing club finances and events.",
+      description: "Department Coding Club",
       type: "leadership",
       current: true
     },
@@ -35,7 +36,7 @@ const ExperienceSection = () => {
       company: "CSE Coding Club",
       period: "2024 – 2025",
       location: "KEC",
-      description: "Organized coding competitions and technical workshops for fellow students.",
+      description: "Organized coding competitions, hackathons and technical workshops for fellow students.",
       type: "leadership",
       current: false
     },
@@ -89,8 +90,12 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-900">
-      <div className="max-w-7xl mx-auto">
+    <section id="experience" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-neutral-900 overflow-hidden">
+      {/* Particles Background */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <Particles particleCount={200} particleColors={["#00ffff", "#00ffea", "#0055ff"]} speed={0.08} particleSpread={10} particleBaseSize={100} alphaParticles={true} className="w-full h-full" />
+      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

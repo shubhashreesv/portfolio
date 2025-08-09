@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import FadeContent from '../ui/FadeContent';
 import { skillsData } from '../../data/skills';
 import { Code, Database, Cloud, Palette, Brain, Users, Settings, Trophy } from 'lucide-react';
+import Particles from '../ui/Particles';
 
 const SkillsSection = () => {
   const getCategoryIcon = (category) => {
@@ -35,9 +36,13 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-neutral-800"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 bg-neutral-950 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      {/* Particles Background */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <Particles particleCount={200} particleColors={["#00ffff", "#00ffea", "#0055ff"]} speed={0.08} particleSpread={10} particleBaseSize={100} alphaParticles={true} className="w-full h-full" />
+      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section title */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}

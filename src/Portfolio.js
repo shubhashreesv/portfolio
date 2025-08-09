@@ -8,6 +8,7 @@ import ProjectSection from "./components/sections/ProjectSection";
 import SkillsSection from "./components/sections/SkillsSection";
 import AchievementsSection from "./components/sections/AchievementsSection";
 import Ribbons from './components/ui/Ribbons';
+import LightRays from './components/ui/LightRays';
 
 import { motion } from "framer-motion";
 import {
@@ -109,6 +110,7 @@ const Portfolio = () => {
               viewport={{ once: true }}
               className="text-4xl sm:text-5xl font-bold text-center mb-16 text-white"
             >
+              
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Education
               </span>
