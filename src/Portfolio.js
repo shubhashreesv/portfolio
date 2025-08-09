@@ -8,7 +8,7 @@ import SkillsSection from "./components/sections/SkillsSection";
 import AchievementsSection from "./components/sections/AchievementsSection";
 
 import { motion } from "framer-motion";
-import { Award, GraduationCap } from "lucide-react";
+import { Award, GraduationCap, Mail, Phone, MapPin, Linkedin, Github, Code } from "lucide-react";
 
 const Portfolio = () => {
   const containerVariants = {
