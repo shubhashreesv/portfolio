@@ -51,14 +51,14 @@ const Portfolio = () => {
       institution: "Kongu Engineering College",
       period: "2023 – 2027",
       cgpa: "9.16 (Current)",
-      description: "Specialized in software development, data structures, and emerging technologies."
+      description: "Specialing in software development, data structures, and emerging technologies."
     },
     {
       degree: "Higher Secondary Education",
       institution: "Erode Hindu Kalvi Nilayam Mat. Hr. Sec. School",
       period: "2021 – 2023",
-      cgpa: "HSC I: 95% | HSC II: 96.37%",
-      description: "Strong foundation in mathematics, physics, and computer science."
+      cgpa: "HSC I: 95% | HSC II: 96.33%",
+      description: "Secured 100% in Computer Science in both HSC I and II."
     }
   ];
 
@@ -225,7 +225,7 @@ const Portfolio = () => {
                   <p className="text-white font-medium mb-4">Follow me on:</p>
                   <div className="flex space-x-4">
                     <motion.a
-                      href="https://linkedin.com/in/shubhashreesv"
+                      href="https://www.linkedin.com/in/shubha-shree-sv/"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -243,7 +243,7 @@ const Portfolio = () => {
                       <Github className="w-5 h-5" />
                     </motion.a>
                     <motion.a
-                      href="https://leetcode.com/shubha-shree"
+                      href="https://leetcode.com/u/shubha_shree/"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, rotate: 5 }}

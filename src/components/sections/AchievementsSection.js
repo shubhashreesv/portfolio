@@ -13,7 +13,7 @@ const achievements = [
     icon: <Star className="w-5 h-5" aria-label="Star Icon" />
   },
   {
-    title: "Second I Prize in Inter Dept Programming Contest by KEC Coding Forum",
+    title: "Secured I Prize in Inter Dept Programming Contest by KEC Coding Forum",
     year: "2024",
     description: "Competitive programming excellence",
     type: "competition",
