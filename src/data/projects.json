@@ -4,7 +4,7 @@
     "description": "A secure freelancing platform for client-freelancer matching, enabling project tracking and profile management.",
     "tech": ["MERN", "React", "Node.js", "MongoDB", "Express"],
     "github": "https://shubhashreesv.github.io/HireUs/",
-    "live": "#",
+    "live": "https://shubhashreesv.github.io/HireUs/",
     "image": "/images/freelancing-platform.png",
     "category": "Full Stack",
     "status": "Completed"
@@ -14,7 +14,7 @@
     "description": "Implemented a role-based task management web app with CRUD operations, improving task assignment efficiency.",
     "tech": ["Django", "MySQL", "HTML", "CSS", "Bootstrap"],
     "github": "https://github.com/VishnuMK2006/to_do",
-    "live": "#",
+    "live": "https://github.com/VishnuMK2006/to_do",
     "image": "/images/task-system.png",
     "category": "Backend",
     "status": "Completed"
@@ -24,7 +24,7 @@
     "description": "Designed an informational website displaying medicine details, usage guidelines, and health cautions.",
     "tech": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/shubhashreesv/webpage_know_your_med/",
-    "live": "#",
+    "live": "https://github.com/shubhashreesv/webpage_know_your_med/",
     "image": "/images/know-your-med.png",
     "category": "Frontend",
     "status": "Completed"
@@ -34,7 +34,7 @@
     "description": "Created a browser extension for real-time grammar correction in text fields.",
     "tech": ["JavaScript", "Chrome Extension APIs", "HTML", "CSS"],
     "github": "https://github.com/shubhashreesv/grammar-extension",
-    "live": "#",
+    "live": "https://github.com/shubhashreesv/grammar-extension",
     "image": "/images/grammar-checker.png",
     "category": "Extension",
     "status": "Completed"
@@ -44,7 +44,7 @@
     "description": "Developing an Event Management System for KEC with venue management and event showcasing features.",
     "tech": ["MERN", "MongoDB", "Express", "React", "Node.js"],
     "github": "https://github.com/shubhashreesv",
-    "live": "#",
+    "live": "https://github.com/shubhashreesv",
     "image": "/images/kec-events.png",
     "category": "Full Stack",
     "status": "In Progress"
