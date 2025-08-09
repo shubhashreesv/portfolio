@@ -3,14 +3,14 @@ import './App.css';
 import HeroSection from "./components/sections/HeroSection";
 import Portfolio from './Portfolio';
 import ProjectSection from "./components/sections/ProjectSection";
+import Ribbons from './components/ui/Ribbons';
 
 function App() {
   return (
     <div>
       <Portfolio />
-      
+      <Ribbons/>
     </div>
-    
   );
 }
 
