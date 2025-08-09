@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import projects from "../../data/projects.json";
-import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
+import { ExternalLink, Github, Tag } from "lucide-react";
 import Particles from "../ui/Particles";
 
 const ProjectsSection = () => {
