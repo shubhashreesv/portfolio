@@ -36,11 +36,6 @@ const ProjectsSection = () => {
     return colorMap[category] || "from-gray-500 to-slate-500";
   };
 
-  const getStatusColor = (status) => {
-    return status === "Completed" 
-      ? "bg-green-500/20 text-green-400 border-green-500/30"
-      : "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
-  };
 
   return (
   <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-neutral-900/90 overflow-hidden">

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   VscAccount,
   VscArchive,
-  VscSettingsGear,
   VscProject,
   VscMail,
   VscVerified,
@@ -10,14 +9,12 @@ import {
 } from 'react-icons/vsc';
 
 const navItems = [
-  { icon: <VscAccount size={18} />, label: 'About', href: '#about' },
-  { icon: <VscProject size={18} />, label: 'Skills', href: '#skills' },
-    { icon: <VscBriefcase size={18} />, label: 'Experience', href: '#experience' },
-
-  { icon: <VscArchive size={18} />, label: 'Projects', href: '#projects' },
-    { icon: <VscVerified size={18} />, label: 'Achievements', href: '#achievements' },
-
-  { icon: <VscMail size={18} />, label: 'Contact', href: '#contact' },
+  { icon: <VscAccount size={20} />, label: 'About', href: '#about' },
+  { icon: <VscProject size={20} />, label: 'Skills', href: '#skills' },
+  { icon: <VscArchive size={20} />, label: 'Projects', href: '#projects' },
+  { icon: <VscVerified size={20} />, label: 'Achievements', href: '#achievements' },
+  { icon: <VscBriefcase size={20} />, label: 'Experience', href: '#experience' },
+  { icon: <VscMail size={20} />, label: 'Contact', href: '#contact' },
 ];
 
 const Navbar = () => {

@@ -3,27 +3,12 @@ import React, { useState } from "react";
 import Navbar from './components/Navbar';
 import HeroSection from "./components/sections/HeroSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
-import projects from "./data/projects.json";
 import ProjectSection from "./components/sections/ProjectSection";
 import SkillsSection from "./components/sections/SkillsSection";
 import AchievementsSection from "./components/sections/AchievementsSection";
-import Ribbons from './components/ui/Ribbons';
-import LightRays from './components/ui/LightRays';
 
 import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-  Code,
-  Award,
-  Briefcase,
-  Database,
-  GraduationCap,
-  BookOpen,
-} from "lucide-react";
+import { Award, GraduationCap } from "lucide-react";
 
 const Portfolio = () => {
   const containerVariants = {
@@ -110,7 +95,7 @@ const Portfolio = () => {
               viewport={{ once: true }}
               className="text-4xl sm:text-5xl font-bold text-center mb-16 text-white"
             >
-              
+
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Education
               </span>
