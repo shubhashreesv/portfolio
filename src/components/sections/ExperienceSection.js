@@ -9,7 +9,7 @@ const ExperienceSection = () => {
       company: "Gen AI Consortium",
       period: "Nov 2024 – Apr 2025",
       location: "Remote",
-      description: "Working on cutting-edge AI projects and gaining hands-on experience with generative AI technologies.",
+      description: "Learnt Fundamentals of AI and gaining hands-on experience with generative AI technologies.",
       type: "internship",
       current: false
     },

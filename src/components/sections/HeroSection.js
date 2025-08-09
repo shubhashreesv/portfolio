@@ -1,6 +1,6 @@
 // src/components/sections/HeroSection.jsx
 import { motion } from "framer-motion";
-import { Github, Linkedin, Code, Download, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Code, Download, Mail } from "lucide-react";
 import LetterGlitch from "../ui/LetterGlitch"; // ✅ import the glitch bg
 
 const HeroSection = () => {
@@ -53,10 +53,6 @@ const HeroSection = () => {
             <Mail className="w-4 h-4" />
             <span>shubha.sv.shree@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4" />
-            <span>+91 86109 92202</span>
-          </div>
         </motion.div>
 
         {/* Social Links */}
@@ -67,7 +63,7 @@ const HeroSection = () => {
           className="flex justify-center space-x-4 mb-10"
         >
           <motion.a
-            href="https://linkedin.com/in/shubhashreesv"
+            href="https://www.linkedin.com/in/shubha-shree-sv/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, rotate: 5 }}
@@ -85,7 +81,7 @@ const HeroSection = () => {
             <Github className="w-5 h-5" />
           </motion.a>
           <motion.a
-            href="https://leetcode.com/shubha-shree"
+            href="https://leetcode.com/shubha_shree"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, rotate: 5 }}
