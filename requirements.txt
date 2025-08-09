@@ -1,5 +1,0 @@
-framer-motion
-lucide-react
-tailwindcss
-autoprefixer
-postcss
