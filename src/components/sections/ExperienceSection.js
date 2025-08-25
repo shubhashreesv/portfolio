@@ -14,7 +14,7 @@ const ExperienceSection = () => {
       current: false
     },
     {
-      role: "Treasurer",
+      role: "Additional Treasurer",
       company: "CSE Coding Club",
       period: "2025 – Present",
       location: "KEC",
