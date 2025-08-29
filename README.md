@@ -1,5 +1,7 @@
-<<<<<<< HEAD
+
 # portfolio
+=============
+
 Personal Portfolio - Shubha Shree
 =======
 # Getting Started with Create React App
